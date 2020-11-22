@@ -12,26 +12,34 @@ How does one's annual household income affect if they, as adults, remain in the 
 ## Data Sources
 [Google Colaboratory](https://colab.research.google.com/drive/1JwyPECzXniWTbxy00Tyl-9DqhfIUZhUr?usp=sharing) shows the code that I used for this data analysis.
 
-[Baltimore Income Data]( link here ) shows the raw data for the Household Income metric in the general Baltimore, MD area.
+[Baltimore Income Data](https://github.com/viv-sun/python-baltimore-baskingridge-income-same-tract/blob/main/Baltimore_Income%20Data.csv) shows the raw data for the Household Income metric in the general Baltimore, MD area.
 
-[Baltimore Same Tract Data]( link here ) shows the raw data for the SST metric in the general Baltimore, MD area. 
+[Baltimore Same Tract Data](https://github.com/viv-sun/python-baltimore-baskingridge-income-same-tract/blob/main/Baltimore_Same%20Tract%20Data.csv) shows the raw data for the SST metric in the general Baltimore, MD area. 
 
-[Basking Ridge Income Data]( link here ) shows the raw data for the Household Income metric in the 07920 Bernards Township area. 
+[Basking Ridge Income Data](https://github.com/viv-sun/python-baltimore-baskingridge-income-same-tract/blob/main/Basking%20Ridge_Income%20Data.csv) shows the raw data for the Household Income metric in the 07920 Bernards Township area. 
 
-[Basking Ridge Same Tract Data]( link here) shows the raw data for the SST metric in the 07920 Bernards Township area. 
+[Basking Ridge Same Tract Data](https://github.com/viv-sun/python-baltimore-baskingridge-income-same-tract/blob/main/Basking%20Ridge_Same%20Tract%20Data.csv) shows the raw data for the SST metric in the 07920 Bernards Township area. 
 
 ## Data Analysis/Metrics 
 I compared the Household Income metric against the SST metric for Baltimore, and again for Basking Ridge. 
 
 ### Graph for Baltimore Comparisons 
-![alt text]( link to graph here ) 
+![alt text](https://github.com/viv-sun/python-baltimore-baskingridge-income-same-tract/blob/main/Baltimore-Household%20Income-Tract%20Graph.jpg) 
+
+![alt text](https://github.com/viv-sun/python-baltimore-baskingridge-income-same-tract/blob/main/Baltimore-SST-Tract%20Graph.jpg)
 
 I sorted the household income from low to high to make it easier to see the relationship (if any) between the two metrics. For the most part, it seems that there is not a clear relationship between household income and the percentage of adults who stayed in the same Census tract. However, towards the right side of the graph, household income shoots up and the percentage of adults who stayed in the same tract falls - it looks as if there is an inverse relationship for the two. 
 
-### Graph for Basking Ridge Comparisons 
-![alt text]( link to graph here )
+This observation remains the same as the one I previously drew from my Excel analysis.
 
-We do need to keep in mind that this sample size is very limited and the range on both Y axes is small. However, it does show (what appears to be) an inverse relationship between the two metrics.  
+### Graph for Basking Ridge Comparisons 
+![alt text](https://github.com/viv-sun/python-baltimore-baskingridge-income-same-tract/blob/main/Basking%20Ridge-Household%20Income-Tract%20graph.jpg)
+
+![alt text](https://github.com/viv-sun/python-baltimore-baskingridge-income-same-tract/blob/main/Basking%20Ridge-SST-Tract%20graph.jpg)
+
+We do need to keep in mind that this sample size is very limited and the range on both Y axes is small. However, it does show (what appears to be) an inverse relationship between the two metrics. 
+
+This observation remains the same as the one I previously drew from my Excel analysis.
 
 ## Summary 
 The results of my data analysis this time (using Python) were very similar to my results from when I used Excel. 
@@ -40,18 +48,15 @@ Overall, the graphs (especially that of Baltimore) seem inconclusive. Both graph
 
 These additional factors include: if people married and left the tract they grew up in; if they pursued higher education, and especially if their universities were within a commuting distance; if there is a brain drain from the area; if people have the income/resources to afford to stay in their childhood Census tracts, assuming if housing prices went up; or if people have the income/resources to leave their childhood Census tracts, assuming they want to leave. By no means is this an exhaustive list of reasons.
 
-Moving forward, I am interested in looking at a larger sample size of data for the Basking Ridge/surrounding area to see if there would be a repeat of the weak relationship that appeared in the Baltimore graph. The Basking Ridge data was rather limited, with a sample size of only three data points. I would also be interested in looking at how the SST metric relates to other metrics available from Opportunity Atlas (like high school graduation rate, employment rate, etc.).
+Moving forward, I am interested in looking at a larger sample size of data for the Basking Ridge/surrounding area to see if there would be a repeat of the weak relationship that appeared in the Baltimore graph. The Basking Ridge data was rather limited, with a sample size of only three data points. I would also be interested in looking at how the SST metric relates to other metrics available from Opportunity Atlas (like high school graduation rate, employment rate, etc.). It would also be a good idea to look at other towns within Bernards Township (the township to which Basking Ridge belonsd) to see if this weak relationship exists there, too. 
 
 Perhaps the additional data may help identify some reasons why people may choose to stay vs leave, but we must also remember that metrics do not provide any insight into intentions. The decision to stay vs leave a tract is a nuanced and deeply personal one; it may not be properly reflected in just one or two metrics. Data, no matter how much we have and although it can provide us with significant insight into someone's decision-making process, does not fully account for the personal and/oor qualitative factors that can also affect a decision to stay vs leave.
 
 ### Python vs Excel
 For this version of the project, I believe that the data analysis results were rather similar because I used the same raw data and the same steps for filtering and analyzing data (albeit with a different software). 
 
-When working with Python, the thing that struck me the most was how quick and easy it was to work with the data. I didn't have to wade through and delete undesired columns or fiddle with Excel graphs (especially when trying to configure which axis should represent which column of data). It was a lot easier and a lot faster in terms of setting up the data analysis, especially for merging datasets together. 
+Personally, I found working with Python to be more difficult than working in Excel, largely because 1) I am not as familiar with Python as a coding language, and 2) it was more difficult to glance over the raw data in Python (to check if my action yielded the desired results) than it was in Excel. I spent a bulk of my time trying to figure out small syntax errors, understanding how the code works, and, at times, being (slightly) frustrated that my code wasn't working. 
 
-I would still recommend using Microsoft Excel for filtering data, especially for a smaller dataset, simply because it is easier to visualize the dataset when  first starting out. However, I believe that Python would still be the mode of choice for me when it comes to merging datasets together and creating data visualizations. It was much easier and more straightforward to use Python to assign a certain column to each axis, as opposed to working with Excel and trying to "switch variables" when editing the data, and running into potential errors there.  
+However, one plus side of Python was how easy it was to rename columns or delete undesired columns. Although I had a bit of difficulty with the code for the graphs (largely because of my inexperience with the language), I believe that Python would be easier to use for simple data visualizations, especially when dealing with multiple columns of data. Excel, at times, can be difficult to configure, especially in terms of assigning which axis should represent which data column; Python was more straightforward when it came to assigning a variable to an axis. In this respect, it was easier and faster in terms of setting up the data analysis, especially for merging datasets together. 
 
-
-
-
-Highlight how using Python was different than using Excel and how you may or may not use both together in the future.
+I would still recommend using Microsoft Excel for filtering data, especially for a smaller dataset, simply because it is easier to visualize the dataset and to check my work as I go along. However, I believe that Python would be ideal for data visualizations. I will have to figure out how Python can be used for more complex data visualizations, however, like a combination line-and-bar graph (instead of having separate graphs for each)! 
